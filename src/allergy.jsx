@@ -17,7 +17,7 @@ export default function Allergy(){
     const [medical_history,setMedicalHistory]=useState('')
     useEffect(()=>{
         axios.get(`http://127.0.0.1:8000/allergysearch/${address}/?eth_address=${address}`,{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
-        alert(resp.status)
+        //alert(resp.status)
         return resp.data
     }).then(data=>{
             console.log(data)
