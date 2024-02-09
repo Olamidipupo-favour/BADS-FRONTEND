@@ -16,7 +16,7 @@ export default function Allergy(){
     const [allergy,setAllergy]=useState('')
     const [medical_history,setMedicalHistory]=useState('')
     useEffect(()=>{
-        axios.get(`http://127.0.0.1:8000/allergysearch/${address}/?eth_address=${address}`,{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
+        axios.get(`https://bads.onrender.com/allergysearch/${address}/?eth_address=${address}`,{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
         //alert(resp.status)
         return resp.data
     }).then(data=>{

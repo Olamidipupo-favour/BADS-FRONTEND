@@ -17,7 +17,7 @@ function Login() {
     e.preventDefault();
     // Perform login logic here
     try{
-        axios.post("http://127.0.0.1:8000/api/token/",{"username":username,"password":password}).then((response)=>{
+        axios.post("https://bads.onrender.com/api/token/",{"username":username,"password":password}).then((response)=>{
             
             localStorage.setItem("access_token",response.data.access);
             localStorage.setItem("refresh_token",response.data.refresh);

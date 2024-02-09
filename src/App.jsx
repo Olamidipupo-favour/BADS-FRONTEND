@@ -11,7 +11,7 @@ function App() {
   const [allergy,setAllergy]=useState("");
   const [medicalHistory,setMedicalHistory]=useState("");
 useEffect(() => {
-  axios.get("http://127.0.0.1:8000/ping/",{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
+  axios.get("https://bads.onrender.com/ping/",{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
     console.log(resp)
   }
   )
@@ -65,7 +65,7 @@ useEffect(() => {
      <center> <button type="submit" className='block bg-blue-500' onClick={(e)=>{
       e.preventDefault();
       if(address.length>32 && name2.length>0 && familyHistory.length>0 && genotype.length>0 && bloodGroup.length>0 && allergy.length>0 && medicalHistory.length>0){
-        axios.post("http://127.0.0.1:8000/allergysearch/",{"eth_address":address,"name":name2,"family_history":familyHistory,"genotype":genotype,"blood_group":bloodGroup,"allergy":allergy,"medical_history":medicalHistory},{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
+        axios.post("https://bads.onrender.com/allergysearch/",{"eth_address":address,"name":name2,"family_history":familyHistory,"genotype":genotype,"blood_group":bloodGroup,"allergy":allergy,"medical_history":medicalHistory},{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
           console.log(resp)
           alert("Data Added/Modified Successfully")
         }).catch(err=>{
