@@ -15,6 +15,7 @@ export default function Allergy(){
     const [bloodGroup,setBloodGroup]=useState('')
     const [allergy,setAllergy]=useState('')
     const [medical_history,setMedicalHistory]=useState('')
+    const [note,setNote]=useState('')
     useEffect(()=>{
         axios.get(`https://bads.onrender.com/allergysearch/${address}/?eth_address=${address}`,{headers:{"Authorization":`Bearer ${localStorage.getItem("access_token")}`}}).then(resp=>{
         //alert(resp.status)
@@ -27,6 +28,8 @@ export default function Allergy(){
             setBloodGroup(data[3])
             setAllergy(data[4])
             setMedicalHistory(data[5])
+            //change
+            setNote('')
         })
         .catch(err=>{
             console.log(err)
@@ -52,6 +55,7 @@ export default function Allergy(){
             <h5 className='p-2 font-bold font-mono text-xl'>Blood Group: {bloodGroup}</h5>
             <h5 className='p-2 font-bold font-mono text-xl'>Allergy: {allergy}</h5>
             <h5 className='p-2 font-bold font-mono text-xl'>Medical History: {medical_history}</h5>
+            <h5 className='p-2 font-bold font-mono text-xl'>Medical Note: {note}</h5>
             </div>
         </div>
         <div className='absolute bottom-0'>

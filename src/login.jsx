@@ -36,7 +36,7 @@ function Login() {
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <h2 className='font-mono font-bold text-3xl text-center underline'>Login|BADS</h2>
+      <h2 className='font-mono font-bold text-3xl text-center underline'>Login|SPIS</h2>
       <form onSubmit={handleSubmit} className=''>
         <div className='flex flex-col justify-between'>
         <div className='p-6'>
