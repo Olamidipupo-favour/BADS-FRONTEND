@@ -44,23 +44,42 @@ export default function Allergy(){
         })
     })
     return (
-        <div className='bodyy'>
-        <h2 className='text-center font-bold font-mono text-3xl pb-7 underline'>Patient Data|{address}</h2>
-        <div className=' flex flex-row mx-20'>
-            <img className='h-32 w-32 object-fit m-2 border-2  border-black p-2 rounded-md' src={image}/>
-            <div className='mx-20'>
-            <h5 className='p-2 font-bold font-mono text-xl'>Name: {name}</h5>
-            <h5 className='p-2 font-bold font-mono text-xl'>Family History: {history}</h5>
-            <h5 className='p-2 font-bold font-mono text-xl'>Genotype: {genotype}</h5>
-            <h5 className='p-2 font-bold font-mono text-xl'>Blood Group: {bloodGroup}</h5>
-            <h5 className='p-2 font-bold font-mono text-xl'>Allergy: {allergy}</h5>
-            <h5 className='p-2 font-bold font-mono text-xl'>Medical History: {medical_history}</h5>
-            <h5 className='p-2 font-bold font-mono text-xl'>Medical Note: {note}</h5>
-            </div>
+      <div className="bodyy">
+        <h2 className="text-center font-bold font-mono text-3xl pb-7 underline">
+          Patient Data|{address}
+        </h2>
+        <div className=" flex flex-row mx-20">
+          <img
+            className="h-32 w-32 object-fit m-2 border-2  border-black p-2 rounded-md"
+            src={image}
+          />
+          <div className="mx-20">
+            <h5 className="p-2 font-bold font-mono text-xl">Name: {name}</h5>
+            <h5 className="p-2 font-bold font-mono text-xl">
+              Family History:{" "}
+              {history.length > 0 ? history : "Nil."}
+            </h5>
+            <h5 className="p-2 font-bold font-mono text-xl">
+              Genotype: {genotype.length > 0 ? genotype : "Nil."}
+            </h5>
+            <h5 className="p-2 font-bold font-mono text-xl">
+              Blood Group: {bloodGroup.length > 0 ? bloodGroup : "Nil."}
+            </h5>
+            <h5 className="p-2 font-bold font-mono text-xl">
+              Allergy: {allergy.length > 0 ? allergy : "Nil."}
+            </h5>
+            <h5 className="p-2 font-bold font-mono text-xl">
+              Medical History:{" "}
+              {medical_history.length > 0 ? medical_history : "Nil."}
+            </h5>
+            <h5 className="p-2 font-bold font-mono text-xl">
+              Medical Note: {note.length > 0 ? note : "Nil."}
+            </h5>
+          </div>
         </div>
-        <div className='absolute bottom-0'>
-            <h3 className='text-center'>Signed Zeus Health</h3>
+        <div className="absolute bottom-0 left-[50%]">
+          <h3 className="text-center">©SPIS</h3>
         </div>
-        </div>
-    )
+      </div>
+    );
 }
