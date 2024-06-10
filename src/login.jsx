@@ -35,19 +35,39 @@ function Login() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center'>
-      <h2 className='font-mono font-bold text-3xl text-center underline'>Login|SPIS</h2>
-      <form onSubmit={handleSubmit} className=''>
-        <div className='flex flex-col justify-between'>
-        <div className='p-6'>
-          <label className='text-2xl font-mono font-bold p-2'>Username:</label>
-          <input type="text" value={username} onChange={handleUsernameChange} className='rounded-xl h-10 text-white'/>
-        </div>
-        <div className='p-6'>
-          <label className='text-2xl font-mono font-bold p-2'>Password:</label>
-          <input type="password" value={password} onChange={handlePasswordChange} className='rounded-xl h-10 text-white'/>
-        </div>
-        <button type="submit" className='rounded-md bg-blue-600'>Login</button>
+    <div className="flex flex-col items-center justify-center">
+      <h2 className="font-mono font-bold text-3xl text-center underline">
+        Login|SPIS
+      </h2>
+      <form onSubmit={handleSubmit} className="">
+        <div className="flex flex-col justify-between">
+          <div className="p-6">
+            <label className="text-2xl font-mono font-bold p-2">
+              Username:
+            </label>
+            <input
+              type="text"
+              value={username}
+              onChange={handleUsernameChange}
+              placeholder="Username"
+              className="rounded-xl h-10 dark:text-white "
+            />
+          </div>
+          <div className="p-6">
+            <label className="text-2xl font-mono font-bold p-2">
+              Password:
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+              placeholder="password"
+              className="rounded-xl h-10 dark:text-white"
+            />
+          </div>
+          <button type="submit" className="rounded-md bg-blue-600">
+            Login
+          </button>
         </div>
       </form>
     </div>
